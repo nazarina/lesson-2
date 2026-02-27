@@ -105,7 +105,41 @@
         }
         
         .quiz-image-box img { max-width: 100%; height: auto; }
+.lesson-join-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 15px;
+        padding: 20px 50px;
+        font-family: 'Segoe UI', Roboto, sans-serif;
+        font-size: 1.4rem;
+        font-weight: 800;
+        color: #ffffff;
+        text-decoration: none;
+        background: linear-gradient(135deg, #800000 0%, #d63031 100%);
+        border-radius: 60px;
+        box-shadow: 0 10px 25px rgba(128, 0, 0, 0.3);
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+        overflow: hidden;
+        animation: buttonPulse 2s infinite;
+    }
 
+    .lesson-join-button:hover {
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 15px 35px rgba(128, 0, 0, 0.4);
+        filter: brightness(1.1);
+    }
+
+    .lesson-join-button .icon {
+        font-size: 1.8rem;
+    }
+
+    /* Анимация пульсации, чтобы привлечь внимание */
+    @keyframes buttonPulse {
+        0% { box-shadow: 0 0 0 0 rgba(128, 0, 0, 0.4); }
+        70% { box-shadow: 0 0 0 20px rgba(128, 0, 0, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(128, 0, 0, 0); }
+    }
         .character-card {
             background: #fafafa;
             border-radius: 25px;
@@ -175,6 +209,11 @@
     </header>
 
     <div class="container">
+        <div style="text-align: center; margin: 40px 0;">
+    <a href="ССЫЛКА_НА_ZOOM_ИЛИ_GOOGLE_MEET" target="_blank" class="lesson-join-button">
+        <span class="icon">🚀</span> Присоединиться к уроку
+    </a>
+</div>
         
         <section class="section">
             <h2>Повторение: линейные алгоритмы</h2>
